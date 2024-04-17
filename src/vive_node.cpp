@@ -659,13 +659,13 @@ void VIVEnode::Run()
     }
 
     // Publish corrective transform
-    tf::Transform tf_world;
-    tf_world.setOrigin(tf::Vector3(world_offset_[0], world_offset_[1], world_offset_[2]));
-    tf::Quaternion quat_world;
-    quat_world.setRPY(M_PI/2, 0, world_yaw_);
-    tf_world.setRotation(quat_world);
+    // tf::Transform tf_world;
+    // tf_world.setOrigin(tf::Vector3(world_offset_[0], world_offset_[1], world_offset_[2]));
+    // tf::Quaternion quat_world;
+    // quat_world.setRPY(M_PI/2, 0, world_yaw_);
+    // tf_world.setRotation(quat_world);
 
-    tf_broadcaster_.sendTransform(tf::StampedTransform(tf_world, ros::Time::now(), "world", "world_vive"));
+    // tf_broadcaster_.sendTransform(tf::StampedTransform(tf_world, ros::Time::now(), "world", "world_vive"));
 
     // Publish twist messages for controller1 and controller2
     double lin_vel[3], ang_vel[3];
